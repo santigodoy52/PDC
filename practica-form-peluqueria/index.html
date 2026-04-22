@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Turnos</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container mt-4">
+
+    <h1 class="text-center mb-4">Gestión de Turnos</h1>
+
+    <!-- CARD FORM -->
+    <div class="card mb-4">
+        <div class="card-header">Registrar turno</div>
+        <div class="card-body">
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label>Nombre</label>
+                    <input id="inputTexto" type="text" class="form-control" required autofocus>
+                </div>
+                <div class="col-md-6">
+                    <label>Fecha</label>
+                    <input id="inputFecha" type="date" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label>Tipo de servicio</label>
+                    <select id="selectOpciones" class="form-select">
+                        <option value="">Seleccione</option>
+                        <option value="Corte">Corte</option>
+                        <option value="Color">Color</option>
+                        <option value="Peinado">Peinado</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- RADIO -->
+            <div class="mb-3">
+                <label>Prioridad</label><br>
+                <input type="radio" name="radioGrupo" value="Normal"> Normal
+                <input type="radio" name="radioGrupo" value="Urgente"> Urgente
+            </div>
+
+            <!-- CHECKBOX -->
+            <div class="mb-3">
+                <label>Servicio adicional</label><br>
+                <input type="checkbox" value="Lavado"> Lavado
+                <input type="checkbox" value="Tratamiento"> Tratamiento
+            </div>
+
+            <button id="btnAgregar" class="btn btn-success w-100">
+                Agregar turno
+            </button>
+
+        </div>
+    </div>
+
+    <!-- DISPLAY -->
+    <div id="display" class="d-flex flex-wrap mb-4"></div>
+
+    <!-- LISTA -->
+    <ul id="lista" class="list-group mb-4"></ul>
+
+    <!-- TABLA -->
+    <table class="table table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Tipo servicio</th>
+            <th>Prioridad</th>
+            <th>Servicio adicional</th>
+            <th>Acción</th>
+        </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+
+
+    <!-- BOTONES -->
+    <div class="d-flex justify-content-center gap-2 mb-3">
+        <button id="btnClear" class="btn btn-danger">Limpiar</button>
+        <button id="btnRandom" class="btn btn-primary">Generar random</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
