@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;  /* horizontal */
+    align-items: center; /* vertical */
+    height: 100vh;
+    background-color: rgb(200, 200, 200);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgb(143, 171, 196);
+    gap: 10px;
+}
+
+.left img{
+    width: 350px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.list{
+    list-style: none;
+}
+
+.button{
+    border-radius: 5px;
+    width: 100px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+}
